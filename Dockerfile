@@ -32,10 +32,7 @@ ENV NEXUS_HOME=${SONATYPE_DIR}/nexus \
     NEXUS_CONTEXT='' \
     SONATYPE_WORK=${SONATYPE_DIR}/sonatype-work 
 
-RUN apt-get update && \
-    apt-get install -y tar procps gzip && \
-    apt-get clean all  && \
-    groupadd --gid 200 -r nexus && \
+RUN groupadd --gid 200 -r nexus && \
     useradd --uid 200 -r nexus -g nexus -s /bin/false -d /opt/sonatype/nexus -c 'Nexus Repository Manager user'
     
 WORKDIR ${SONATYPE_DIR}
