@@ -1,4 +1,4 @@
-FROM registry.pupgizmo.com/library/java:ubuntu-jre8
+FROM registry.pupgizmo.com/base/java:ubuntu-jre8
 
 LABEL name="Nexus Repository Manager" \
       maintainer="Jason Parks <jparks@jpconsulted.com>" \
